@@ -5,9 +5,15 @@
 }
 
 body {
- 
+    /* Por padrão (mobile): usar versão mobile e mostrar inteira */
+    background: url('./assets/bg-mobile.jpg') no-repeat top center/contain;
+}
 
-    background: url('./assets/bg-desktop.jpg') no-repeat top center/cover;
+/* Em telas maiores (desktop), troca para a imagem desktop e preenche a área */
+@media (min-width: 768px) {
+    body {
+        background: url('./assets/bg-desktop.jpg') no-repeat top center/cover;
+    }
 }
 
 body * {
